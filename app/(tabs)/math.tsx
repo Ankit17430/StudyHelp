@@ -33,8 +33,9 @@ export default function MathScreen() {
                     Q 230 295, 250 300 
                     L 148 420 
                     Q 135 410, 125 397"
-                    fill={'#f2e9cb'}
+                    fill={'#878e99'}
                     strokeWidth={2}
+                    opacity={0.5}
                 />
                 {/* Earth to mars */}
                 <Line
@@ -42,24 +43,27 @@ export default function MathScreen() {
                     y1="550" 
                     x2="180" 
                     y2="470" 
-                    stroke="#f2e9cb"
-                    strokeWidth="2"
+                    stroke="#878e99"
+                    strokeWidth="10"
+                    opacity={0.5}
                 />
                 <Line
                     x1="135" 
                     y1="580" 
                     x2="210" 
                     y2="500" 
-                    stroke="#f2e9cb"
-                    strokeWidth="2"
+                    stroke="#878e99"
+                    strokeWidth="10"
+                    opacity={0.5}
                 />
                 <Line
                     x1="165" 
                     y1="610" 
                     x2="240" 
                     y2="530" 
-                    stroke="#f2e9cb"
-                    strokeWidth="2"
+                    stroke="#878e99"
+                    strokeWidth="10"
+                    opacity={0.5}
                 />
             </Svg>
             <TouchableOpacity
@@ -118,10 +122,12 @@ const styles = StyleSheet.create({
     saturn: {
         height: 250,
         width: 250,
+        opacity: 0.5,
     },
     earth: {
         height: 200,
         width: 200,
+        opacity: 0.5,
     },
     mars: {
         height: 150,
@@ -137,12 +143,12 @@ const styles = StyleSheet.create({
     },
     rocketButton: {
         position: 'absolute',
-        top: 335, // Adjust based on Mars position
-        left: -40, // Adjust based on Mars position
+        top: 285, // Adjust based on Mars position
+        left: -8, // Adjust based on Mars position
     },
     rocket: {
-        height: 270, // Adjust size as needed
-        width: 270, // Adjust size as needed
+        height: 200, // Adjust size as needed
+        width: 200, // Adjust size as needed
         resizeMode: 'contain',
     },
 });

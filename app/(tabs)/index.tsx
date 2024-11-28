@@ -11,7 +11,7 @@ export default function Index() {
   const [selectedLevel, setSelectedLevel] = useState(null);
 
   const calculateIconPosition = () => {
-    return ((width - 60) * progress)/100; // Subtract padding/margins as necessary
+    return ((width - 85) * progress)/100; // Subtract padding/margins as necessary
   };
 
 
@@ -86,7 +86,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center', 
     padding: 16, 
-    // justifyContent: 'space-between', 
     flexDirection: 'column',
   },
   containerContent:{
@@ -100,7 +99,7 @@ const styles = StyleSheet.create({
     textAlign: 'center', 
     letterSpacing: 2,
   },
-    progressContainer: {
+  progressContainer: {
     width: '100%',
     position: 'relative', 
     alignItems: 'center',
@@ -113,6 +112,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     position: 'absolute',
+    left: -10,
     top: -12, 
   },
   endIcon: {
