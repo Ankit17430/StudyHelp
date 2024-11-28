@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { ProgressBar } from "react-native-ui-lib/src/components/progressBar";
 
-export default function ScienceScreen() {
+export default function MathWorksheetScreen() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [shuffledOptions, setShuffledOptions] = useState([]);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -181,12 +181,13 @@ const styles = StyleSheet.create({
     appleColumn: {
         flexDirection: "row",
         alignItems: "center",
-        marginBottom: 10,
+        marginBottom: 80,
+        marginTop: 60,
     },
     appleIcon: {
         width: 100,
         height: 100,
-        marginVertical: 3, 
+        marginVertical: -10, 
     },
     plusSign: {
         fontSize: 24,
@@ -196,13 +197,14 @@ const styles = StyleSheet.create({
         width: "100%",
         padding: 15,
         marginVertical: 10,
-        backgroundColor: "#ececec",
+        backgroundColor: "#173258",
         borderRadius: 10,
         alignItems: "center",
         // marginBottom: 100,
     },
     optionText: {
         fontSize: 18,
+        color: '#fff',
     },
     correctAnswer: {
         backgroundColor: "green",
