@@ -1,3 +1,4 @@
+import { useFonts } from 'expo-font';
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 
 type Props = {
@@ -7,6 +8,9 @@ type Props = {
 };
 
 export default function LevelButton({ label, onPress, isSelected }: Props) {
+    const [fontsLoaded] = useFonts({
+        'Education-Pencil': require('../../assets/fonts/Education-Pencil.ttf'),
+    });
     return (
         <View style={styles.buttonContainer}>
             <Pressable style={[styles.button, isSelected ? styles.selectedButton : styles.defaultButton]} onPress={onPress}>
@@ -44,7 +48,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#4d6280', // Highlight color for selected button
     },
     buttonLabel: {
+        fontFamily: 'Education-Pencil',
         color: '#fff',
-        fontSize: 16,
+        fontSize: 30,
     },
 });

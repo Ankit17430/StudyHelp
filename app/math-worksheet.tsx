@@ -1,3 +1,4 @@
+import { useFonts } from 'expo-font';
 import { router } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
@@ -10,6 +11,10 @@ export default function MathWorksheetScreen() {
     const [isCorrect, setIsCorrect] = useState(null);
     const [disabledAnswers, setDisabledAnswers] = useState([]);
     const [progress, setProgress] = useState(0);
+
+    const [fontsLoaded] = useFonts({
+        'Education-Pencil': require('../assets/fonts/Education-Pencil.ttf'),
+    });
 
     const questions = [
         {
@@ -176,22 +181,27 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         flexDirection: "row", 
         alignItems: "center", 
-        marginBottom: 20,
+        marginBottom: -15,
+        // marginHorizontal: -40,
     },
     appleColumn: {
         flexDirection: "row",
         alignItems: "center",
         marginBottom: 80,
         marginTop: 60,
+        marginHorizontal: -60,
     },
     appleIcon: {
-        width: 100,
-        height: 100,
-        marginVertical: -10, 
+        width: 200,
+        height: 200,
+        marginVertical: -50,
+        marginHorizontal: -60,
     },
     plusSign: {
+        fontFamily: 'Education-Pencil',
         fontSize: 24,
         marginBottom: 10,
+        marginHorizontal: 70,
     },
     option: {
         width: "100%",
@@ -203,6 +213,7 @@ const styles = StyleSheet.create({
         // marginBottom: 100,
     },
     optionText: {
+        fontFamily: 'Education-Pencil',
         fontSize: 18,
         color: '#fff',
     },
@@ -213,6 +224,7 @@ const styles = StyleSheet.create({
         backgroundColor: "red",
     },
     text: {
+        fontFamily: 'Education-Pencil',
         color: '#173258',
         fontSize: 40,
         marginBottom: 5,

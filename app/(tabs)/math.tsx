@@ -1,9 +1,14 @@
+import { useFonts } from 'expo-font';
 import { router } from 'expo-router';
 import React from 'react';
 import { Text, View, StyleSheet, ImageBackground, Image, SafeAreaView, TouchableOpacity } from 'react-native';
 import Svg, { Line, Path } from 'react-native-svg';
 
 export default function MathScreen() {
+    const [fontsLoaded] = useFonts({
+        'Education-Pencil': require('../../assets/fonts/Education-Pencil.ttf'),
+    });
+
     return (
         <SafeAreaView style={styles.safeArea}>
             <ImageBackground
@@ -97,6 +102,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     titleText: {
+        fontFamily: 'Education-Pencil',
         position: 'absolute', 
         color: '#f2e9cb',
         fontSize: 50,

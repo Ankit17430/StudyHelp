@@ -3,10 +3,15 @@ import LevelButton from '../components/LevelButton';
 import { ProgressBar } from "react-native-ui-lib/src/components/progressBar";
 import { useState } from "react";
 import Icon from 'react-native-vector-icons/AntDesign'
+import { useFonts } from 'expo-font';
 
 const {width} = Dimensions.get('window')
 
 export default function Index() {
+  const [fontsLoaded] = useFonts({
+    'Education-Pencil': require('../../assets/fonts/Education-Pencil.ttf'),
+  });
+
   const [progress, setProgress] = useState(0);
   const [selectedLevel, setSelectedLevel] = useState(null);
 
@@ -92,6 +97,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   titleContainer: {
+    fontFamily: 'Education-Pencil',
     width: "100%",
     color: '#173258',
     fontSize: 50,
@@ -121,6 +127,7 @@ const styles = StyleSheet.create({
     top: -16, // Adjust the vertical position if necessary
   },
   progressText: {
+    fontFamily: 'Education-Pencil',
     color: '#173258',
     fontSize: 40,
     marginBottom: 5,
@@ -131,12 +138,13 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start', 
   },
   subHeader: {
+    fontFamily: 'Education-Pencil',
     color: '#fff',
     fontSize: 18,
     // marginBottom: 15,
     textAlign: 'left', 
   },
-    roundedBox: {
+  roundedBox: {
     // width
     borderColor: '#fff',
     borderWidth: 5,
@@ -147,7 +155,9 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
     colorSheet: {
-        width: 100,
-        height: 100,
+      marginTop: -15,
+      marginLeft: -40,
+      width: 150,
+      height: 150,
     }
 });
