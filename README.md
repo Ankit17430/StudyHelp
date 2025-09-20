@@ -11,7 +11,6 @@ An educational mobile app built with Expo + React Native that helps kids practic
 
 ![App Demo](assets/images/demo.gif)
 
-If the GIF does not render, add or export a demo to `assets/images/demo.gif` or update the path above to your preferred location.
 
 ## Features
 
