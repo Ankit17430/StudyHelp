@@ -3,7 +3,6 @@
 ![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20Android%20%7C%20Web-173258)
 ![Expo SDK](https://img.shields.io/badge/Expo-52-000?logo=expo)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=fff)
-![License](https://img.shields.io/badge/License-Unspecified-lightgrey)
 
 An educational mobile app built with Expo + React Native that helps kids practice early math with an engaging, space‑themed flow. It uses Expo Router for navigation, custom fonts, vector icons, and a short intro video that leads into an interactive worksheet.
 
